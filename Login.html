@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap">
+    <link rel="shortcut icon" href="/images/astronauta-3.png" type="img/x icon">
+    <title>Login</title>
+    <style>
+        :root {
+            --white:#282020;
+            --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .login {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .form-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 300px;
+    }
+    .img logo {
+      width: 200px;
+      margin-bottom: 50px;
+      justify-self: center;
+      display: none;
+      color:yellowgreen;
+    }
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .subtitle {
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+    .label {
+      font-size: var(--sm);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .input {
+      background-color: var(--text-input-field);
+      border: none;
+      border-radius: 8px;
+      height: 30px;
+      font-size: var(--md);
+      padding: 6px;
+      margin-bottom: 12px;
+    }
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+    }
+    .login-button {
+      margin-top: 14px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 640px) {
+      .logo {
+        display: block;
+      }
+    }
+    </style>
+    <script async src="/cdn-cgi/bm/cv/669835187/api.js"></script>
+
+    <style type="text/css">
+        :root topadblock, 
+        :root span[id^="ezoic-pub-ad-placeholder-"], 
+        :root mq-programmatic-ad, :root div[id^="zergnet-widget"], 
+        :root div[id^="traffective-ad-"], :root div[id^="taboola-stream-"], 
+        :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], 
+        :root div[id^="proadszone-"], :root div[id^="lazyad-"], 
+        :root div[id^="js-dfp-"], :root div[id^="gtm-ad-"], 
+        :root div[id^="google_dfp_"], :root div[id^="ezoic-pub-ad-"], 
+        :root div[id^="div-adtech-ad-"], :root div[id^="dfp-slot-"], 
+        :root div[id^="dfp-ad-"], :root div[id^="code_ads_"], 
+        :root div[id^="banner-ad-"], :root div[id^="advt-"], 
+        :root div[id^="advads_"], :root div[id^="advads-"], 
+        :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], 
+        :root div[id^="adngin-"], :root div[id^="adfox_"], 
+        :root div[id^="ad_script_"], :root div[id^="ad_rect_"], 
+        :root div[id^="ad_position_"], :root div[id^="ad-server-"], 
+        :root div[id^="ad-inserter-"], :root div[id^="ad-cid-"], 
+        :root div[id^="_vdo_ads_player_ai_"], 
+        :root div[data-test-id="AdDisplayWrapper"], 
+        :root div[data-subscript="Advertising"], 
+        :root div[data-spotim-slot], 
+        :root div[data-role="sidebarAd"], 
+        :root div[data-native_ad], 
+        :root div[data-mediatype="advertising"], 
+        :root div[data-insertion], 
+        :root div[data-id-advertdfpconf], 
+        :root div[data-dfp-id], 
+        :root hl-adsense, 
+        :root div[data-contentexchange-widget], 
+        :root div[data-content="Advertisement"], 
+        :root div[data-adunit], 
+        :root div[data-adunit-path], 
+        :root div[data-before-content="advertisement"], 
+        :root div[data-adservice-param-tagid="contentad"], 
+        :root div[data-adname], 
+        :root div[data-ad-wrapper], 
+        :root div[data-ad-underplayer], 
+        :root div[data-ad-placeholder], 
+        :root div[class^="sp-adslot-"], 
+        :root div[class^="s-dfp-"], 
+        :root div[class^="proadszone-"], 
+        :root div[class^="pane-google-admanager-"], 
+        :root div[class^="native-ad-"], 
+        :root div[class^="lifeOnwerAd"], 
+        :root div[class^="largeRectangleAd_"], 
+        :root div[class^="kiwiad-popup"], 
+        :root div[class^="kiwiad-desktop"], 
+        :root div[class^="index_adBeforeContent_"], 
+        :root div[class^="index_adAfterContent_"], 
+        :root div[class^="index__adWrapper"], 
+        :root div[class^="block-openx-"], 
+        :root div[class^="backfill-taboola-home-slot-"], 
+        :root div[class^="articleAdUnitMPU_"], 
+        :root div[class^="advertisement-desktop"], 
+        :root div[class^="adunit_"], 
+        :root div[class^="adsbutt_wrapper_"], 
+        :root div[class^="ads-partner-"], 
+        :root div[class^="adpubs-"], 
+        :root div[class^="adbanner_"], 
+        :root div[class^="ad_position_"], 
+        :root div[class^="SponsoredAds"], 
+        :root div[class^="ResponsiveAd-"], 
+        :root div[class^="PreAd_"], 
+        :root div[class^="Display_displayAd"], 
+        :root div[class^="Directory__footerAds"], 
+        :root div[class^="Component-dfp-"], 
+        :root div[class^="AdhesionAd_"], 
+        :root div[class^="Ad__bigBox"], 
+        :root a[href^="https://go.ebrokerserve.com/"], 
+        :root a[href^="http://axdsz.pro/"], 
+        :root div[aria-label="Ads"], 
+        :root a[href^="http://lp.ezdownloadpro.info/"], 
+        :root a[href^="http://uploaded.net/ref/"], 
+        :root aside[id^="advads_ad_widget-"], 
+        :root aside[id^="adrotate_widgets-"], 
+        :root a[href^="https://ad.doubleclick.net/"], 
+        :root app-advertisement, :root amp-ad-custom, 
+        :root [data-ad-width], :root [id*="MGWrap"], 
+        :root ad-desktop-sidebar, 
+        :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], 
+        :root div[id^="div-ads-"], 
+        :root a[href^="http://at.atwola.com/"], 
+        :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, 
+        :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, 
+        :root a[href^="https://www.vfreecams.com/in/?track="], 
+        :root a[href^="https://www.share-online.biz/affiliate/"], 
+        :root a[href^="https://www.securegfm.com/"], 
+        :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], 
+        :root DFP-AD, :root a[href^="//porngames.adult/?SID="], 
+        :root a[href^="https://www.oneclickroot.com/?tap_a="] > img, 
+        :root a[href^="https://www.oboom.com/ad/"], 
+        :root a[href^="https://www.nudeidols.com/cams/"], 
+        :root a[href^="https://www.mypornstarcams.com/landing/click/"], 
+        :root a[href^="https://www.mrskin.com/account/"], 
+        :root div[data-adzone], :root a[href^="https://www.iyalc.com/"], 
+        :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], 
+        :root a[href^="https://www.get-express-vpn.com/offer/"], 
+        :root a[href^="https://www.gambling-affiliation.com/cpc/"], 
+        :root a[href^="http://webgirlz.online/landing/"], 
+        :root a[href^="https://www.g4mz.com/"], 
+        :root a[href^="https://www.dollps.com/?track="], 
+        :root a[href^="https://www.clicktraceclick.com/"], 
+        :root a[href^="https://www.camsoda.com/enter.php?id="], 
+        :root a[href^="https://www.brazzersnetwork.com/landing/"], 
+        :root a[href^="https://www.bebi.com"], 
+        :root .card-captioned.crd > .crd--cnt > .s2nPlayer, 
+        :root a[href^="https://www.arthrozene.com/"][href*="?tid="], 
+        :root a[href^="https://www.adskeeper.co.uk/"], 
+        :root a[href^="https://t.grtyi.com/"], 
+        :root a[href^="https://wittered-mainging.com/"], 
+        :root a[href^="http://farm.plista.com/pets"], 
+        :root a[href^="https://windscribe.com/promo/"], 
+        :root a[href^="http://k2s.cc/code/"], 
+        :root a[href^="https://webroutetrk.com/"], 
+        :root [href^="/ucdownload.php"], 
+        :root a[href^="https://wantopticalfreelance.com/"],
+        :root amp-embed[type="taboola"], 
+        :root a[href^="http://c43a3cd8f99413891.com/"], 
+        :root a[href^="https://trust.zone/go/r.php?RID="], 
+        :root div[data-ad-targeting], 
+        :root a[href^="https://trk.moviesflix4k.xyz/"], 
+        :root a[href^="https://trf.bannerator.com/"], 
+        :root a[href^="https://bestcond1tions.com/"], 
+        :root a[href^="http://go.247traffic.com/"], 
+        :root a[href^="https://trappist-1d.com/"], 
+        :root a[href^="http://anonymous-net.com/"], 
+        :root a[href^="https://transfer.xe.com/signup/track/redirect?"], 
+        :root a[href^="https://vo2.qrlsx.com/"], 
+        :root a[href^="https://tracking.truthfinder.com/?a="], 
+        :root a[href^="https://tracking.gitads.io/"], 
+        :root a[href^="https://go.xxxjmp.com/"], 
+        :root a[href^="https://tracking.avapartner.com/"], 
+        :root a[href^="https://track.ultravpn.com/"], 
+        :root a[href^="https://track.interactivegf.com/"], 
+        :root a[href^="https://vlnk.me/"], 
+        :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], 
+        :root a[href^="https://track.healthtrader.com/"], 
+        :root a[href^="http://greensmoke.com/"], 
+        :root a[href^="https://track.effiliation.com/servlet/effi.click?"] > img, 
+        :root a[href^="https://track.clickmoi.xyz/"], 
+        :root a[href^="https://track.afcpatrk.com/"], 
+        :root a[href^="https://control.trafficfabrik.com/"], 
+        :root a[href^="https://track.52zxzh.com/"], 
+        :root a[href^="https://axdsz.pro/"], 
+        :root a[href^="https://tour.mrskin.com/"], 
+        :root a[href^="http://www.greenmangaming.com/?tap_a="], 
+        :root a[href^="https://tm-offers.gamingadult.com/"], 
+        :root a[href^="https://t.hrtyj.com/"], 
+        :root a[href^="https://t.adating.link/"], 
+        :root a[href^="https://squren.com/rotator/?atomid="], 
+        :root div[id^="ad-div-"], 
+        :root a[href^="https://secure.eveonline.com/ft/?aid="], 
+        :root [href^="https://mypillow.com/"] > img, 
+        :root a[href^="https://www.sheetmusicplus.com/?aff_id="], 
+        :root div[class^="pane-adsense-managed-"], 
+        :root a[href^="https://www.bang.com/?aff="], 
+        :root a[href^="https://secure.bstlnk.com/"], 
+        :root div[class^="index_displayAd_"], 
+        :root a[href^="http://adultgames.xxx/"], 
+        :root a[href^="http://semi-cod.com/clicks/"], 
+        :root a[href^="https://s.zlink2.com/"], 
+        :root div[class^="kiwi-ad-wrapper"], 
+        :root a[href^="https://rev.adsession.com/"], 
+        :root a[href^="https://someperceptionparade.com/"], 
+        :root a[href^="https://refpasrasw.world/"], 
+        :root div[data-google-query-id], 
+        :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], 
+        :root a[href^="https://refpaexhil.top/"], 
+        :root a[href^="https://reachtrgt.com/"], 
+        :root [href^="http://advertisesimple.info/"], 
+        :root a[href^="https://www.friendlyduck.com/AF_"], 
+        :root a[href^="https://queersodadults.com/"], 
+        :root div[id^="yandex_ad"], 
+        :root a[href^="https://www.hotgirls4fuck.com/"], 
+        :root a[href^="https://www.pornhat.com/"][rel="nofollow"], 
+        :root AD-SLOT, :root a[href^="https://pubads.g.doubleclick.net/"], 
+        :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, 
+        :root a[href^="http://www.my-dirty-hobby.com/?sub="], 
+        :root a[href^="https://porndeals.com/?track="], 
+        :root a[href^="https://pcm.bannerator.com/"], 
+        :root a[href^="https://offerforge.net/"], 
+        :root a[href^="https://track.wg-aff.com"], 
+        :root a[href^="https://nutrientassumptionclaims.com/"], 
+        :root a[href^="https://ndt5.net/"], 
+        :root a[href^="https://natour.naughtyamerica.com/track/"], 
+        :root a[href^="https://myusenet.xyz/"], 
+        :root a[href^="https://my-movie.club/"], 
+        :root a[href^="https://msecure117.com/"], 
+        :root [href^="https://detachedbates.com/"], 
+        :root a[href^="https://mk-cdn.net/"], 
+        :root a[href^="https://mk-ads.com/"], 
+        :root a[href^="https://meet-sex-here.com/?u="], 
+        :root a[href^="https://medleyads.com/"], 
+        :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], 
+        :root iframe[src^="https://tpc.googlesyndication.com/"], 
+        :root a[href^="https://a.bestcontentoperation.top/"], 
+        :root a[href^="https://landing1.brazzersnetwork.com"], 
+        :root a[href^="http://adrunnr.com/"], 
+        :root a[href^="https://landing.brazzersplus.com/"], 
+        :root a[href^="https://land.rk.com/landing/"], 
+        :root a[href^="http://ad.au.doubleclick.net/"], 
+        :root a[href^="https://k2s.cc/pr/"], 
+        :root a[href^="https://juicyads.in/"], 
+        :root a[href^="https://join.virtuallust3d.com/"], 
+        :root a[href^="http://www.uniblue.com/cm/"], 
+        :root a[href^="https://join.sexworld3d.com/track/"], 
+        :root a[href^="https://join.dreamsexworld.com/"], 
+        :root a[href^="https://trusted-click-host.com/"], 
+        :root a[href^="https://members.linkifier.com/public/affiliateLanding?refCode="], 
+        :root a[href^="https://jmp.awempire.com/"], 
+        :root [href^="http://join.shemalepornstar.com/"], 
+        :root [id^="ad_sky"], 
+        :root a[href^="https://incisivetrk.cvtr.io/click?"], 
+        :root a[href^="https://iactrivago.ampxdirect.com/"], 
+        :root a[href^="https://iac.ampxdirect.com/"], 
+        :root a[href^="https://horny-pussies.com/tds"], 
+        :root a[href^="https://graizoah.com/"], 
+        :root a[href^="https://goraps.com/"],
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container"><br>
+          <img src="/logo proyecto.jpeg" alt="logo" class="logo">
+          
+            <h1 class="title">Create new password</h1>
+            <p class="subtitle">Enter a new password for your account</p>
+
+            <form action="/" class="form">
+               <label for="password" class="label">Username</label>
+               <input type="password" id="password" placeholder=""
+               class="input input-password">
+               <label for="new-password" class="label">Password</label>
+               <input type="password" id="new-password" placeholder="" class="input input-password">
+               <input type="submit"  value="Confirm" class="primary-button login-button">
+            </form>
+            
+        </div>
+    </div>
+
+  
+    <script type="text/javascript">
+        (function(){window['__CF$cv$params']={r:'6fc5efe98f6467c3',m:'kheokDs6FVRqec.jcQktoLhX62bVw2MEBry7la4AoT8-1650038877-0-Ae8MV8RHad1ftWqCZxhavvfm/XuzLeM63drqdVtq6HxOMKdAiRkwqFNl1DzKpqmToa0+FVl16SpEkjlr/UFywA3a/J2w2G/6BstrNWrOMi+8tDmHRlQ84eWh3N8J93t7IRlmLFmivF+21RMZGbyHDYwLFQY49yUO0g8w3yINzCmynko4S/CmZyxJj2pMJIHuBsM75UgEuDSQXqL03l9Z2po=',s:[0x71671436ee,0x0684a05fb2],}})();
+    </script>
+</body>
+</html>
